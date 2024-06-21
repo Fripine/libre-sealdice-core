@@ -616,19 +616,23 @@ func (pa *PlatformAdapterLagrangeGo) QuitGroup(ctx *MsgContext, groupId string) 
 }
 
 func (pa *PlatformAdapterLagrangeGo) SetGroupCardName(ctx *MsgContext, name string) {
-	// log := pa.Session.Parent.Logger
-	// groupIdRaw := UserIDExtract(ctx.Group.GroupID)
-	// groupCode, err := strconv.ParseInt(groupIdRaw, 10, 64)
-	// if err != nil {
-	// 	log.Errorf("ParseInt failed: %v", err)
-	// 	return
-	// }
+	log := pa.Session.Parent.Logger
+	groupIdRaw := UserIDExtract(ctx.Group.GroupID)
+	groupCode, err := strconv.ParseInt(groupIdRaw, 10, 64)
+	if err != nil {
+		log.Errorf("ParseInt failed: %v", err)
+		return
+	}
 	// uidRaw := UserIDExtract(ctx.Player.UserID)
 	// userCode, err := strconv.ParseInt(uidRaw, 10, 64)
 	// if err != nil {
 	// 	log.Errorf("ParseInt failed: %v", err)
 	// 	return
 	// }
+	if err := pa.QQClient.GroupRenameMember(uint32(groupCode), pa.UIN, name); err != nil {
+		log.Errorf("SetGroupCardName failed: %v", err)
+		return
+	}
 	// _ = pa.QQClient.RefreshGroupMembersCache(uint32(groupCode))
 	// req, err := oidb.BuildGroupRenameMemberReq(uint32(groupCode), pa.QQClient.GetUid(uint32(userCode), uint32(groupCode)), name)
 	// if err != nil {
