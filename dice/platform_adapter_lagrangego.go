@@ -366,6 +366,7 @@ func (pa *PlatformAdapterLagrangeGo) Serve() int {
 				Nickname: event.Sender.Nickname,
 				UserID:   "QQ:" + strconv.FormatInt(int64(event.Sender.Uin), 10),
 			},
+			RawID: event.Id,
 		}
 		msg.Segment = LagrangeGoMessageElementsToSealElements(event.Elements)
 		pa.Session.ExecuteNew(pa.EndPoint, msg)
@@ -384,6 +385,7 @@ func (pa *PlatformAdapterLagrangeGo) Serve() int {
 				Nickname: event.Sender.Nickname,
 				UserID:   "QQ:" + strconv.FormatInt(int64(event.Sender.Uin), 10),
 			},
+			RawID: event.Id,
 		}
 		msg.Segment = LagrangeGoMessageElementsToSealElements(event.Elements)
 		pa.Session.ExecuteNew(pa.EndPoint, msg)
