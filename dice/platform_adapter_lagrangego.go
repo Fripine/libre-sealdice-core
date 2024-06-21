@@ -348,8 +348,8 @@ func (pa *PlatformAdapterLagrangeGo) Serve() int {
 	pa.CurState = StateCodeLoginSuccessed
 	pa.EndPoint.Enable = true
 	pa.EndPoint.UserID = fmt.Sprintf("QQ:%d", pa.sig.Uin)
+	pa.EndPoint.Nickname = pa.QQClient.NickName()
 	_ = pa.QQClient.RefreshFriendCache()
-
 	// setup event handler
 	pa.QQClient.GroupMessageEvent.Subscribe(func(client *client.QQClient, event *lagMessage.GroupMessage) {
 		log.Debugf("GroupMessageEvent: %+v", event)
