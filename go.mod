@@ -3,6 +3,7 @@ module libre-sealdice-core
 go 1.20
 
 require (
+	github.com/LagrangeDev/LagrangeGo v0.0.0-20240621081027-fdadab7b7026
 	github.com/Masterminds/semver/v3 v3.2.1
 	github.com/Milly/go-base2048 v0.1.0
 	github.com/ShiraazMoollatjie/goluhn v0.0.0-20211017190329-0d86158c056a
@@ -85,7 +86,6 @@ require (
 )
 
 require (
-	github.com/LagrangeDev/LagrangeGo v0.0.0-20240620070428-03831221fd93
 	github.com/RoaringBitmap/roaring v1.2.3 // indirect
 	github.com/bits-and-blooms/bitset v1.2.2 // indirect
 	github.com/bits-and-blooms/bloom/v3 v3.2.0 // indirect

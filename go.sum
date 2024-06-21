@@ -4,8 +4,8 @@ github.com/BurntSushi/toml v0.3.1 h1:WXkYYl6Yr3qBf1K79EBnL4mak0OimBfB0XUf9Vl28OQ
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/FloatTech/ttl v0.0.0-20230307105452-d6f7b2b647d1 h1:g4pTnDJUW4VbJ9NvoRfUvdjDrHz/6QhfN/LoIIpICbo=
 github.com/FloatTech/ttl v0.0.0-20230307105452-d6f7b2b647d1/go.mod h1:fHZFWGquNXuHttu9dUYoKuNbm3dzLETnIOnm1muSfDs=
-github.com/LagrangeDev/LagrangeGo v0.0.0-20240620070428-03831221fd93 h1:hsUUSAKIA09uI5VS1psnnBA3leMDCZX1Bp7It54GZcs=
-github.com/LagrangeDev/LagrangeGo v0.0.0-20240620070428-03831221fd93/go.mod h1:bXBGpyljx81ux9ItumiMB67xJGGpe2Sb5CTUFFeTR+Y=
+github.com/LagrangeDev/LagrangeGo v0.0.0-20240621081027-fdadab7b7026 h1:435fpdEuB3J/mV2pku1NC4n8GAtsHy1GVbTwAn1/At0=
+github.com/LagrangeDev/LagrangeGo v0.0.0-20240621081027-fdadab7b7026/go.mod h1:bXBGpyljx81ux9ItumiMB67xJGGpe2Sb5CTUFFeTR+Y=
 github.com/Masterminds/semver/v3 v3.2.1 h1:RN9w6+7QoMeJVGyfmbcgs28Br8cvmnucEXnY0rYXWg0=
 github.com/Masterminds/semver/v3 v3.2.1/go.mod h1:qvl/7zhW3nngYb5+80sSMF+FG2BjYrf8m9wsX0PNOMQ=
 github.com/Milly/go-base2048 v0.1.0 h1:7ZgpCR3cjcAAVqIo+B8Q3P1+VFHRS8zilzAq062rUUk=
