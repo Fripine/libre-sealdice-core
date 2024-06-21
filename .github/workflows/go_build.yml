@@ -28,7 +28,7 @@ jobs:
           goarch: ${{ matrix.goarch }}
           binary_name: "libre-sealdice-core" # 可以指定二进制文件的名称
           pre_command: "go mod tidy && go generate ./..."
-          release_tag: Pre-release
+          release_tag: pre-release
           overwrite: true
           asset_name: libre-sealdice-core-${{ matrix.goos }}-${{ matrix.goarch }}
           md5sum: false
