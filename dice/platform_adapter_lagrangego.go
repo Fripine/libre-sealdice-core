@@ -588,12 +588,12 @@ func (pa *PlatformAdapterLagrangeGo) SendFileToGroup(ctx *MsgContext, uid string
 }
 
 func (pa *PlatformAdapterLagrangeGo) QuitGroup(ctx *MsgContext, groupId string) {
-	// log := pa.Session.Parent.Logger
-	// groupCode, err := strconv.ParseInt(UserIDExtract(groupId), 10, 64)
-	// if err != nil {
-	// 	log.Errorf("ParseInt failed: %v", err)
-	// 	return
-	// }
+	log := pa.Session.Parent.Logger
+	groupCode, err := strconv.ParseInt(UserIDExtract(groupId), 10, 64)
+	if err != nil {
+		log.Errorf("ParseInt failed: %v", err)
+		return
+	}
 	// req, err := oidb.BuildGroupLeaveReq(uint32(groupCode))
 	// if err != nil {
 	// 	log.Errorf("BuildGroupLeaveReq failed: %v", err)
@@ -608,7 +608,11 @@ func (pa *PlatformAdapterLagrangeGo) QuitGroup(ctx *MsgContext, groupId string) 
 	// if err != nil {
 	// 	log.Errorf("ParseGroupLeaveResp failed: %v", err)
 	// }
-	// log.Debugf("QuitGroup success")
+	if err := pa.QQClient.GroupLeave(uint32(groupCode)); err != nil {
+		log.Errorf("QuitGroup failed: %v", err)
+		return
+	}
+	log.Debugf("QuitGroup success")
 }
 
 func (pa *PlatformAdapterLagrangeGo) SetGroupCardName(ctx *MsgContext, name string) {
